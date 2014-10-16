@@ -16,15 +16,16 @@ public class LoginController {
 					login)) {
 				if (((Usuario) usu).getSenha().equals(senha)) {
 					usuario = (Usuario) usu;
-					return "/usuario.jsp";
+					return "/home.jsp";
 				}
 			}
 		}
 		return "/login.jsp";
 	}
 
-	public void logout() {
+	public String logout() {
 		usuario = null;
+		return "/login.jsp";
 	}
 
 	public boolean isLoggedIn() {

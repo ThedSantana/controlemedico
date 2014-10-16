@@ -10,7 +10,13 @@
 	media="screen">
 </head>
 <body>
-	<h1>Conteúdo Cabeçalho</h1>
+	<h2 id="title">Controle Médico</h2>
+	<h:form id="sair">
+
+		<h:commandLink styleClass="myLink" value="Sair" action="#{loginController.logout}"
+			rendered="#{loginController.loggedIn}" />
+
+	</h:form>
 </body>
 
 </html>

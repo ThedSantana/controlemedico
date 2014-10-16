@@ -15,15 +15,17 @@ public class UsuarioController {
 		usuario = new Usuario();
 	}
 
-	public void save() {
+	public String save() {
 		usuarioDao.save(usuario);
 		usuario = new Usuario();
+		return "/listusuario.jsp";
 	}
 
-	public void edit() {
+	public String edit() {
 		// pega o parametro passado no link
 		Integer id = Integer.parseInt((String) FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("id"));
 		usuario = usuarioDao.getById(id);
+		return "/usuario.jsp";
 	}
 	
 	public void delete(){
@@ -43,6 +45,10 @@ public class UsuarioController {
 
 	public List<Usuario> getUsuarios() {
 		return usuarioDao.findAll();
+	}
+	
+	public String listar() {
+		return "/listusuario.jsp";
 	}
 
 }

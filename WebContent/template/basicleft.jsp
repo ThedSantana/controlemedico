@@ -9,8 +9,14 @@
 <link rel="StyleSheet" type="text/css" href="css/estilos.css"
 	media="screen">
 </head>
-<body >
-	<h1>Lateral</h1>
+<body>
+	<h:form>
+		<h:commandButton styleClass="myButton" value="Home" action="home?faces-redirect=true" />
+	</h:form>
+	<h:form>
+		<h:commandButton styleClass="myButton" value="List Usuários"
+			action="listusuario?faces-redirect=true" />
+	</h:form>
 </body>
 </html>
 

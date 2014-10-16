@@ -5,53 +5,39 @@
 <html>
 <f:view>
 	<head>
-	<title><h:outputText value="Login" /></title>
-	<link rel="StyleSheet" type="text/css" href="css/estilos.css"
-media="screen">
+<title><h:outputText value="Login" /></title>
+<link rel="StyleSheet" type="text/css" href="css/estilos.css"
+	media="screen">
 	</head>
 	<body>
-		<table>
-			<tr valign='top'>
-				<td><%@include file='/template/basicleft.jsp'%></td>
-				<td>
-					<table>
-						<tr>
-							<td><%@include file='/template/basicheader.jsp'%></td>
-						</tr>
-						<tr>
-							<td><h:form>
+		<div id="topo">
+			<%@include file='/template/basicheader.jsp'%>
+		</div>
+		<div id="middle">
+			<div class="center">
+				<h:form>
 
-									<h:panelGrid columns="2"
-										rendered="#{!loginController.loggedIn}">
+					<h:panelGrid columns="2" columnClasses="panelColumn" styleClass="panelLogin"
+						rendered="#{!loginController.loggedIn}">
 
-										<h:outputLabel for="username">Login:</h:outputLabel>
+						<h:outputLabel for="username">Login:</h:outputLabel>
 
-										<h:inputText id="username" value="#{loginController.login}" />
+						<h:inputText id="username" value="#{loginController.login}" />
 
-										<h:outputLabel for="password">Senha:</h:outputLabel>
+						<h:outputLabel for="password">Senha:</h:outputLabel>
 
-										<h:inputSecret id="password" value="#{loginController.senha}" />
+						<h:inputSecret id="password" value="#{loginController.senha}" />
 
-									</h:panelGrid>
+						<h:outputLabel></h:outputLabel>
 
-									<h:commandButton value="Entrar"
-										action="#{loginController.login}"
-										rendered="#{!loginController.loggedIn}" />
+						<h:commandButton styleClass="button" value="Entrar"
+							action="#{loginController.login}"
+							rendered="#{!loginController.loggedIn}" />
+					</h:panelGrid>
 
-									<h:commandButton value="Sair"
-										action="#{loginController.logout}"
-										rendered="#{loginController.loggedIn}" />
-
-								</h:form></td>
-						</tr>
-						<tr>
-							<td><%@include file='/template/basicfooter.jsp'%></td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-
+				</h:form>
+			</div>
+		</div>
 	</body>
 </f:view>
 </html>
