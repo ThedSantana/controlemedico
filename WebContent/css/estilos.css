@@ -1,0 +1,129 @@
+@import url("tabela.css");
+
+body {
+	background-color: #ffffff;
+}
+
+div {
+	width: 1200px;
+	padding: 10px;
+	margin: 0 auto;
+	background-color: #f4ffff;
+	border: 0px;
+}
+
+.left {
+	/* 	border-right: 1px solid #00aa55; */
+	width: 120px;
+	height: 95%;
+	background-color: #ffffff;
+	float: left;
+}
+
+.center {
+	width: 1035px;
+	height: 95%;
+	align-items: center;
+	float: left;
+}
+
+#title {
+	display: inline;
+	padding: 0px 10px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	color: white;
+}
+
+.clear {
+	clear: both;
+	border: 0;
+	padding: 0;
+	background-color: white;
+}
+
+#topo {
+	background-color: #00aa55;
+	height: 25px;
+}
+
+#middle {
+	width: 1200px;
+	height: 100%;
+}
+
+#sair {
+	display: inline;
+	padding: 0px 20px;
+	float: right;
+	width: 60px;
+}
+
+#bottom {
+	
+}
+
+.myButton {
+	background-color: #f4ffff;
+	border: 1px solid #ecffff;
+	display: inline-block;
+	cursor: pointer;
+	color: #00aa55;
+	font-family: arial;
+	font-size: 17px;
+	width: 120px;
+	height: 30px;
+}
+
+.myButton:hover {
+	background-color: #c1ffff;
+}
+
+.myLink {
+	cursor: pointer;
+	color: #ffffff;
+	font-family: arial;
+	font-size: 17px;
+}
+
+.button {
+	background-color: #00aa55;
+	border: 1px solid #ecffff;
+	display: inline-block;
+	cursor: pointer;
+	color: #f4ffff;
+	font-family: arial;
+	font-size: 17px;
+	width: 120px;
+	height: 30px;
+}
+
+.button:hover {
+	background-color: #c1ffff;
+	color: #00aa55;
+}
+
+.panelLogin {
+	border: 2px solid #00aa55;
+	padding: 10px 10px 10px 10px;
+	position: center;
+	margin-top: 10%;
+	margin-left: 50%;
+}
+
+.panelCadastro {
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+	position: center;
+}
+
+.inputText {
+	width: 100%;
+}
+
+.panelColumn1 {
+	width: 20%
+}
+
+.panelColumn2 {
+	width: 100%;
+}
