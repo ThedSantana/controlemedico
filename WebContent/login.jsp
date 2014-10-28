@@ -1,3 +1,4 @@
+<%@page import="com.sample.controller.LoginController"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
 <%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
@@ -10,6 +11,11 @@
 	media="screen">
 	</head>
 	<body>
+		<%
+			if (!LoginController.deslogado()) {
+				 response.sendRedirect("/controlemedico/home.faces");
+			}
+		%>
 		<div id="topo">
 			<%@include file='/template/basicheader.jsp'%>
 		</div>
@@ -17,8 +23,8 @@
 			<div class="center">
 				<h:form>
 
-					<h:panelGrid columns="2" columnClasses="panelColumn" styleClass="panelLogin"
-						rendered="#{!loginController.loggedIn}">
+					<h:panelGrid columns="2" columnClasses="panelColumn"
+						styleClass="panelLogin" rendered="#{!loginController.loggedIn}">
 
 						<h:outputLabel for="username">Login:</h:outputLabel>
 
@@ -34,7 +40,6 @@
 							action="#{loginController.login}"
 							rendered="#{!loginController.loggedIn}" />
 					</h:panelGrid>
-
 				</h:form>
 			</div>
 		</div>

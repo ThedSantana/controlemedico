@@ -18,14 +18,14 @@ public class UsuarioController {
 	public String save() {
 		usuarioDao.save(usuario);
 		usuario = new Usuario();
-		return "/listusuario.jsp";
+		return "listusuario.jsp";
 	}
 
 	public String edit() {
 		// pega o parametro passado no link
 		Integer id = Integer.parseInt((String) FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("id"));
 		usuario = usuarioDao.getById(id);
-		return "/usuario.jsp";
+		return "usuario.jsp";
 	}
 	
 	public void delete(){
@@ -48,7 +48,7 @@ public class UsuarioController {
 	}
 	
 	public String listar() {
-		return "/listusuario.jsp";
+		return "listusuario.jsp";
 	}
 
 }

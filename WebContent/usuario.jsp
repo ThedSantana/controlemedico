@@ -1,3 +1,4 @@
+<%@page import="com.sample.controller.LoginController"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
 <%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
@@ -11,6 +12,11 @@
 	media="screen">
 	</head>
 	<body>
+		<%
+			if (LoginController.deslogado()) {
+				 response.sendRedirect("/controlemedico/login.faces");
+			}
+		%>
 		<div id="topo">
 			<%@include file='/template/basicheader.jsp'%>
 		</div>

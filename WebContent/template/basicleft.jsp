@@ -17,6 +17,14 @@
 		<h:commandButton styleClass="myButton" value="List Usuários"
 			action="listusuario?faces-redirect=true" />
 	</h:form>
+	<h:form>
+		<h:commandButton styleClass="myButton" value="List Medicos"
+			action="listmedico?faces-redirect=true" />
+	</h:form>
+	<h:form>
+		<h:commandButton styleClass="myButton" value="List Consultas"
+			action="listconsulta?faces-redirect=true" />
+	</h:form>
 </body>
 </html>
 

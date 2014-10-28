@@ -3,28 +3,89 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
  http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
-	version="1.2">		
+	version="1.2">
 	<!-- Navegacao -->
- 	<navigation-rule>
-		<from-view-id>pessoa.jsp</from-view-id>
- 		<navigation-case>
- 			<from-outcome>*</from-outcome>
- 			<to-view-id>pessoa.jsp</to-view-id> 			
- 		</navigation-case> 		
- 	</navigation-rule>
- 	
- 	<!-- Bean -->	
- 	
- 	<managed-bean>
- 		<managed-bean-name>usuarioController</managed-bean-name>
- 		<managed-bean-class>com.sample.controller.UsuarioController</managed-bean-class>
- 		<managed-bean-scope>session</managed-bean-scope> 		
- 	</managed-bean> 
- 	
- 	<managed-bean>
- 		<managed-bean-name>loginController</managed-bean-name>
- 		<managed-bean-class>com.sample.controller.LoginController</managed-bean-class>
- 		<managed-bean-scope>session</managed-bean-scope> 		
- 	</managed-bean> 
-	
+	<navigation-rule>
+		<from-view-id>login.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>*</from-outcome>
+			<to-view-id>login.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>usuario.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>*</from-outcome>
+			<to-view-id>usuario.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>listusuario.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>*</from-outcome>
+			<to-view-id>listusuario.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>consulta.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>*</from-outcome>
+			<to-view-id>consulta.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>listconsulta.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>*</from-outcome>
+			<to-view-id>listconsulta.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>medico.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>*</from-outcome>
+			<to-view-id>medico.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>listmedico.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>*</from-outcome>
+			<to-view-id>listmedico.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- Bean -->
+
+	<managed-bean>
+		<managed-bean-name>usuarioController</managed-bean-name>
+		<managed-bean-class>com.sample.controller.UsuarioController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>loginController</managed-bean-name>
+		<managed-bean-class>com.sample.controller.LoginController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>consultaController</managed-bean-name>
+		<managed-bean-class>com.sample.controller.ConsultaController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>exameController</managed-bean-name>
+		<managed-bean-class>com.sample.controller.ExameController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>medicoController</managed-bean-name>
+		<managed-bean-class>com.sample.controller.MedicoController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
 </faces-config>
